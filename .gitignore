@@ -1,8 +1,10 @@
 #all logs
 *.log
 
-src/*.pyc
-src/.ruffus_history.sqlite
+*.pyc
+
+.ruffus_history.sqlite
+
 #All
 *.egg-info
 
