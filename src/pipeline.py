@@ -10,7 +10,7 @@ import sys
 def make_pipeline(state):
     '''Build the pipeline by constructing stages and connecting them together'''
     # Build an empty pipeline
-    pipeline = Pipeline(name='complexo')
+    pipeline = Pipeline(name='SNPs_Analysis')
     # Get a list of paths to all the FASTQ files
     fastq_files = state.config.get_option('fastqs')
     # Find the path to the reference genome
