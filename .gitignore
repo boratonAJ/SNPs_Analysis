@@ -1,6 +1,6 @@
 #all logs
 *.log
-
+*.pyc
 #All
 *.egg-info
 
