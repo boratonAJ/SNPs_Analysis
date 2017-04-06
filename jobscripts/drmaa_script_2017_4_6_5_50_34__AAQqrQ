@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_mark_duplicates_picard
+#job_other_options=-q long.q@grid05.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=30720M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load picard-tools/picard-tools-1.141/picard.jar
+java -jar -Xmx29g $PICARD_HOME/picard.jar MarkDuplicates INPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.sort.bam OUTPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.sort.dedup.bam METRICS_FILE=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.metricsdup VALIDATION_STRINGENCY=LENIENT MAX_RECORDS_IN_RAM=5000000 ASSUME_SORTED=True COMPRESSION_LEVEL=5 CREATE_INDEX=True

@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_buildBamIndex
+#job_other_options=-q long.q@grid02.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load picard-tools/picard-tools-1.141/picard.jar
+java -jar -Xmx9g $PICARD_HOME/picard.jar BuildBamIndex INPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.sort.dedup.bam OUTPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.bai 

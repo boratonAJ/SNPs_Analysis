@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_novosort_bam
+#job_other_options=-q long.q@grid05.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load novoalign/novoalign-3.01.00
+novosort -c 8 -m 10G -s -f /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.bam -o /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.sort.bam 

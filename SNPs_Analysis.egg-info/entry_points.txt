@@ -1,0 +1,3 @@
+[console_scripts]
+SNPs_Analysis = src.main:main
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_freebayes_call
+#job_other_options=-q long.q@grid02.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=8192M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load freebayes/9.9.13
+freebayes -f /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.fasta --ploidy 1 /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.sort.dedup.realn.bam > /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.raw.freebayes.snps.indels.g.vcf 

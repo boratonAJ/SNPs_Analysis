@@ -1,0 +1,7 @@
+#!/bin/sh
+#job_name=H37Rv_align_bwa
+#job_other_options=-q long.q@grid05.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load bwa/bwa-0.7.8
+module load samtools/samtools-0.1.19
+bwa mem -t 8 -R "@RG	ID:H37Rv1118	SM:H37Rv1118	PL:Illumina" /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.fasta /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118_R1.fastq.gz /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118_R2.fastq.gz | samtools view -bS -h -o /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.bwa.bam -

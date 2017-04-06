@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_RealignerTarget_gatk
+#job_other_options=-q long.q@grid05.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=30720M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load gatk/gatk-3.2.2
+java -jar -Xmx29g $GATK_HOME/GenomeAnalysisTK.jar -T RealignerTargetCreator -R /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.fasta -I /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.sort.dedup.bam --num_threads 8 -o /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.chr.intervals

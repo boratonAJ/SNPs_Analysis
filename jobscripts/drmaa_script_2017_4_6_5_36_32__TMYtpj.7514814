@@ -1,0 +1,6 @@
+#!/bin/sh
+#job_name=H37Rv_trim_fastq
+#job_other_options=-q long.q -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
+. /etc/profile.d/module.sh
+module load Trimmomatic/0.33
+java -jar -Xmx9g /cip0/software/java/Trimmomatic-0.33/trimmomatic-0.33.jar PE -threads 8 -phred33 /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_R1.fastq.gz /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_R2.fastq.gz  /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_1P_R1.fq.gz /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_1UP_R1.fq.gz  /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_2P_R2.fq.gz /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_2UP_R2.fq.gz  LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 
