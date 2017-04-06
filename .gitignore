@@ -3,7 +3,9 @@
 
 *.pyc
 
-.ruffus_history.sqlite
+*.png
+
+*.ruffus_history.sqlite
 
 #All
 *.egg-info
@@ -12,8 +14,3 @@
 .core/
 .jobscripts/
 .dist/
-
-
-example/.ruffus_history.sqlite
-example/*.png
-example/*.log
