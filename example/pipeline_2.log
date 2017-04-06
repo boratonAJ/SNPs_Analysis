@@ -1,3 +1,0 @@
-
-2017-04-06 src.logger
- 05:47:55 - /net/datasrv3hs.sanbi.ac.za/datastore/data12/people/ajayi/ENV/bin/complexo_pipeline --use_threads --log_file pipeline_2.log --verbose 5 --config example/pipeline_2.config
