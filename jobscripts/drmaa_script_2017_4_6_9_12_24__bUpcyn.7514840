@@ -1,7 +1,0 @@
-#!/bin/sh
-#job_name=H37Rv_novoalign
-#job_other_options=-q long.q@grid05.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
-. /etc/profile.d/module.sh
-module load novoalign/novoalign-3.01.00
-module load samtools/samtools-0.1.19
-novoalign -c 8 -k -d /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.nix -f /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118_1P_R1.fq.gz /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118_2P_R2.fq.gz -i 250,100 -o SAM "@RG	ID:H37Rv1118	SM:H37Rv1118	PL:Illumina" | samtools view -bS -o /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1118.bam -

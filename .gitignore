@@ -1,6 +1,8 @@
 #all logs
 *.log
-*.pyc
+
+src/*.pyc
+src/.ruffus_history.sqlite
 #All
 *.egg-info
 
@@ -11,6 +13,5 @@
 
 
 example/.ruffus_history.sqlite
-example/chart.png
-example/jobscripts/
-example/pipeline.log
+example/*.png
+example/*.log

@@ -1,6 +1,0 @@
-#!/bin/sh
-#job_name=H37Rv_variant_samtools_filter
-#job_other_options=-q long.q@grid02.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=8192M  -M 3004115@myuwc.ac.za
-. /etc/profile.d/module.sh
-module load samtools/samtools-0.1.19
-vcfutils.pl varFilter /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.raw.sam_bwa.snps.indels.g.vcf > /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117_filtered.vcf 

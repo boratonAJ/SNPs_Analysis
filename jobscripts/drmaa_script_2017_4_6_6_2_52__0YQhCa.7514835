@@ -1,6 +1,0 @@
-#!/bin/sh
-#job_name=H37Rv_call_variants_gatk
-#job_other_options=-q long.q@grid02.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=30720M  -M 3004115@myuwc.ac.za
-. /etc/profile.d/module.sh
-module load gatk/gatk-3.2.2
-java -jar -Xmx29g $GATK_HOME/GenomeAnalysisTK.jar -T HaplotypeCaller -R /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.fasta --min_base_quality_score 20 --variant_index_parameter 128000 --emitRefConfidence GVCF --standard_min_confidence_threshold_for_calling 30.0 --num_cpu_threads_per_data_thread 8 --variant_index_type LINEAR --standard_min_confidence_threshold_for_emitting 30.0 -I /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.sort.dedup.realn.bam -o /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.raw.snps.indels.g.vcf

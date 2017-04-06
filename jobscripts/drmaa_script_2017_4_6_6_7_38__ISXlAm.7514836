@@ -1,6 +1,0 @@
-#!/bin/sh
-#job_name=H37Rv_call_variants_samtools
-#job_other_options=-q long.q@grid02.sanbi.ac.za -pe serial 8 -l docker=1 -l h_vmem=8192M  -M 3004115@myuwc.ac.za
-. /etc/profile.d/module.sh
-module load samtools/samtools-0.1.19
-samtools mpileup -ugf /usr/people/ajayi/test/complexo_pipeline/example/reference/HumanTest500k_g1k_H37Rv_decoy.fasta I /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.sort.dedup.realn.bam | bcftools view -vgc - > /cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.raw.sam_bwa.snps.indels.g.vcf

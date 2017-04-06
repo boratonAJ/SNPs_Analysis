@@ -1,6 +1,0 @@
-#!/bin/sh
-#job_name=H37Rv_sort_bam_picard
-#job_other_options=-q long.q -pe serial 8 -l docker=1 -l h_vmem=10240M  -M 3004115@myuwc.ac.za
-. /etc/profile.d/module.sh
-module load picard-tools/picard-tools-1.141/picard.jar
-java -jar -Xmx9g $PICARD_HOME/picard.jar SortSam INPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.bwa.bam OUTPUT=/cip0/research/scratch/ajayi/Input_fasta_files/H37Rv1117.bwa.sort.bwa.bam VALIDATION_STRINGENCY=LENIENT SORT_ORDER=coordinate CREATE_INDEX=True
