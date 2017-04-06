@@ -4,10 +4,10 @@
 #All
 *.egg-info
 
-/patch
-/core
-/jobscripts
-/dist
+.patch/
+.core/
+.jobscripts/
+.dist/
 
 
 example/.ruffus_history.sqlite
