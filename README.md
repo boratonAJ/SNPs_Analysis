@@ -64,7 +64,7 @@ git clone https://github.com/boratonAJ/SNPs_Analysis.git
 cd SNPs_Analysis/example
 mkdir reference
 # copy your reference into this directory, or make a symbolic link
-# call it reference/genome.fa
+# call it reference/H37rv.fa
 ```
 
 #### Tell Python where your DRMAA library is 
