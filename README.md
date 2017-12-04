@@ -47,9 +47,11 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 | Output        | aligned_reads.sam*|
 |               |   *Intermediary file, removed from final output |
 
-| Notes	        |   Need to provide the -M flag to BWA, this tells it to consider split reads as secondary, need this for GATK variant calling/Picard support. Alternate alignment tools: Bowtie2, Novoalign Readgroup info is provided with the -R flag. This information is key for downstream GATK functionality. GATK will not work without a read group tag.|
-
-| Command	    |   bwa mem -M -R '@RG\tID:sample_1\tLB:sample_1\tPL:ILLUMINA\tPM:HISEQ\tSM:sample_1' ref input_1 input_2 > aligned_reads.sam |
+| Notes	        |   Need to provide the -M flag to BWA, |
+|               |   this tells it to consider split reads as secondary, need this for GATK variant calling/Picard support. | |               |   Alternate alignment tools: Bowtie2, Novoalign Readgroup info is provided with the -R flag.| 
+|               |   This information is key for downstream GATK functionality. GATK will not work without a read group tag.|
+| Command	    |   bwa mem -M -R '@RG\tID:sample_1\tLB:sample_1\tPL:ILLUMINA\tPM:HISEQ\tSM:sample_1' ref input_1 input_2 >|
+|               |   aligned_reads.sam |
 
 
 
