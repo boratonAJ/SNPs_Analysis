@@ -29,9 +29,10 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
  * [picard](http://broadinstitute.github.io/picard/) (version 1.127)
 
 ** Important Notes:
-..* The pipeline assumes no known variants are available for the Base Quality Score Recalibration step and as such bootsraps a set of SNPs and Indels to provide as input at this step. Contact me if a list of high quality known variants is available for your organism as this data can improve the quality of the output
-..* The current script is designed to work with Paired End data
-..* Due to HPC queue limits on mercer, the pipeline can run on a maximum of 25 libraries at a time
+
+⋅⋅ The pipeline assumes no known variants are available for the Base Quality Score Recalibration step and as such bootsraps a set of SNPs and Indels to provide as input at this step. Contact me if a list of high quality known variants is available for your organism as this data can improve the quality of the output
+⋅⋅ The current script is designed to work with Paired End data
+⋅⋅ Due to HPC queue limits on mercer, the pipeline can run on a maximum of 25 libraries at a time
 
 
 
