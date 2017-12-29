@@ -35,10 +35,10 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 * The current script is designed to work with Paired End data
 * Due to HPC queue limits on mercer, the pipeline can run on a maximum of 25 libraries at a time
 
-# Walk-Through Analysis pipeline Steps
+### Walk-Through Analysis pipeline Steps
 
 |   Step 1.     | Alignment – Map to Reference |
-| ------------- |:-------------:|
+| -------------:|:--------------|
 | Tool          | BWA MEM |
 | Input         | .fastq files, reference genome |
 | Output        | aligned_reads.sam*|
@@ -47,7 +47,7 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 
 
 | Step 2        | Sort SAM file by coordinate, convert to BAM |
-| ------------- |:-------------:|
+| -------------:|:--------------|
 | Tool          | Picard Tools  |
 | Input         | aligned_reads.sam |
 | Output        | sorted_reads.bam* |
@@ -56,7 +56,7 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 
 
 | Step 3        | Collect Alignment & Insert Size Metrics |
-| ------------- |:-------------:|
+| -------------:|:--------------|
 | Tool          | Picard Tools, R, Samtools |
 | Input         | sorted_reads.bam, reference genome |
 | Output        | alignment_metrics.txt, insert_metrics.txt, insert_size_histogram.pdf |
@@ -64,7 +64,7 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 |               | java -jar picard.jar CollectInsertSizeMetrics INPUT=sorted_reads.bam OUTPUT=insert_metrics.txt HISTOGRAM_FILE=insert_size_histogram.pdf|
 
 | Step 4        | Mark MarkDuplicates |
-| -------------:|:-------------:|
+| -------------:|:--------------|
 | Tool          | Picard Tools| 
 | Input         | sorted_reads.bam |
 | Output        | dedup_reads.bam, metrics.txt |
@@ -73,7 +73,7 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 
 
 | Step 5        | Build BAM Index|
-| -------------:|:--------------:|
+| -------------:|:---------------|
 | Tool          | Picard Tools   |
 | Input         | dedup_reads.bam|
 | Output        | dedup_reads.bai*|
@@ -82,7 +82,7 @@ SNPs_Analysis is based on the [Ruffus](http://www.ruffus.org.uk/) library for wr
 
 
 | Step 6        | Create Realignment Targets |
-| -------------:|:-------------:|
+| -------------:|:--------------|
 | Tool          | GATK          |
 | Input         | dedup_reads.bam,reference genome |
 | Output        | realignment_targets.list |
