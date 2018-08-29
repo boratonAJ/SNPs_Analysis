@@ -6,10 +6,6 @@ The run_stage function knows everything about submitting jobs and, given
 the state parameter, has full access to the state of the pipeline, such 
 as config, options, DRMAA and the logger.
 '''
-
-
-
-
 from ruffus import *
 from utils import safe_make_dir
 from runner import run_stage
